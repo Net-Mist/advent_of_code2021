@@ -8,16 +8,16 @@ To compile the cython files run:
 python setup.py build_ext --inplace
 ```
 
-this command will generate the several *module_c.so.cpython-39-your-archi.so* files
+this command will generate several *module_c.so.cpython-39-your-archi.so* files in the required folders
 
 
-## repo description
+## code organization
 
 in each dir, you can find :
 * `input.txt` the input of the exercise
 * a file `c.py` that compute both answers at the same time, or 2 files `c_part1.py` and `c_part2.py` when both parts are very different
 
-sometimes there are also module files.
+sometimes there are also module files. They can be python file or cython file that needs to be compiled.
 
 ## day per day
 * day 1: pure python
@@ -60,7 +60,7 @@ sometimes there are also module files.
 ## things learned:
 * *heapq* is really powerful when working on sorted list. See day 15 for an application
 * *z3* is a great tool for constraints solving. See days 8 and 23
-* Counter instead of defaultdict(lambda: 0)
+* *Counter* are basically the same as  *defaultdict(lambda: 0)*
 * profiling: as simple as a `python -m cProfile -o out.prof script.py` then `snakeviz out.prof`
 * cython is fast. It also provide a great visualization to understand the c code generated from python.
   * annotating python file to gain some speed work well. See day 17
